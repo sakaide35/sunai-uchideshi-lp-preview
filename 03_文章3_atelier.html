@@ -1,0 +1,385 @@
+<!DOCTYPE html><html lang="ja"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>諏内えみ｜文章3 × アトリエ・マガジン（左固定インデックス＋誌面構成）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Noto+Serif+JP:wght@300;400;500;600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+img{display:block;max-width:100%}
+:root{--ink:#1d1b17;--ink2:#262320;--ivory:#f1ebe0;--mut:#a59c8c;--acc:#cf7a4f;--acc2:#e0966c;--line:rgba(241,235,224,.16)}
+body{background:var(--ink);color:var(--ivory);font-family:"Noto Serif JP",serif;line-height:2;
+font-feature-settings:"palt";letter-spacing:.04em;-webkit-font-smoothing:antialiased;font-weight:300}
+.flag{display:inline-block;font-size:.58rem;letter-spacing:.1em;color:var(--acc2);border:1px solid var(--acc);
+border-radius:2px;padding:.05em .45em;margin-left:.5em;vertical-align:middle;font-family:"Jost",sans-serif;font-weight:500}
+i.flag{font-style:normal}
+.note{font-size:.78rem;color:var(--mut);line-height:1.85;margin-top:1rem;font-family:"Jost","Noto Serif JP",sans-serif}
+.note.light{color:rgba(255,255,255,.8)}
+.lab{display:flex;align-items:center;gap:.8rem;margin-bottom:1.4rem}
+.lab-en{font-family:"Jost",sans-serif;font-size:.7rem;letter-spacing:.34em;color:var(--acc2);font-weight:600}
+.lab-ja{font-family:"Jost",sans-serif;font-size:.74rem;letter-spacing:.16em;color:var(--mut);padding-left:.9rem;position:relative}
+.lab-ja::before{content:"";position:absolute;left:0;top:50%;width:.5rem;height:1px;background:var(--line)}
+h1,h2,h3{font-family:"Playfair Display","Noto Serif JP",serif;font-weight:500;line-height:1.5;letter-spacing:.02em}
+h2{font-size:clamp(1.5rem,2.6vw,2.1rem);margin-bottom:1.4rem}
+.serif-xl{font-size:clamp(1.8rem,3.6vw,2.9rem);line-height:1.5}
+p{margin:0 0 1.1rem;font-size:1.0rem}
+.lead{color:var(--acc2);font-weight:400;margin-top:1.2rem}
+.light,.light *{color:#fff}
+.ink-btn{display:inline-flex;align-items:center;gap:.7rem;background:var(--acc);color:#1d1b17;
+font-family:"Jost",sans-serif;font-weight:700;letter-spacing:.12em;font-size:.92rem;padding:1.05rem 2.4rem;
+border-radius:40px;text-decoration:none;transition:.35s;margin-top:1.8rem}
+.ink-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(207,122,79,.4)}
+.ink-btn i{font-style:normal;transition:.3s}.ink-btn:hover i{transform:translateX(4px)}
+.ink-btn.light{background:#fff;color:#1d1b17}
+/* RAIL */
+.rail{position:fixed;left:0;top:0;width:250px;height:100vh;padding:2.4rem 1.8rem;border-right:1px solid var(--line);
+display:flex;flex-direction:column;z-index:40;background:var(--ink)}
+.rail-brand{font-family:"Playfair Display",serif;font-size:1.4rem;color:var(--ivory);text-decoration:none;letter-spacing:.04em;line-height:1.3}
+.rail-brand span{display:block;font-family:"Jost",sans-serif;font-size:.62rem;letter-spacing:.4em;color:var(--mut);margin-top:.4rem}
+.rail-idx{margin-top:2.6rem;display:flex;flex-direction:column;gap:.1rem;flex:1;overflow:auto}
+.rail-idx a{display:flex;gap:.7rem;align-items:baseline;font-size:.84rem;color:var(--mut);text-decoration:none;padding:.5rem 0;transition:.3s;border-bottom:1px solid transparent}
+.rail-idx a span{font-family:"Jost",sans-serif;font-size:.66rem;color:var(--acc);opacity:.6}
+.rail-idx a:hover,.rail-idx a.on{color:var(--ivory)}
+.rail-idx a.on span{opacity:1}
+.rail-cta{margin-top:1.4rem;justify-content:center;font-size:.82rem;padding:.9rem 1rem}
+.rail-fine{font-family:"Jost",sans-serif;font-size:.66rem;letter-spacing:.14em;color:var(--mut);margin-top:1.1rem;line-height:1.7}
+/* CANVAS */
+.canvas{margin-left:250px}
+.spread{padding:7rem clamp(2rem,6vw,6rem);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.spread:nth-child(even){background:var(--ink2)}
+/* COVER */
+.cover{min-height:100vh;display:flex;align-items:center;background:var(--ink)!important}
+.cover-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,5rem);align-items:center;width:100%}
+.cover-kick{font-family:"Jost",sans-serif;letter-spacing:.34em;font-size:.78rem;color:var(--acc2);display:block;margin-bottom:1.8rem}
+.cover h1{font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:1.45}
+.cover-sub{margin-top:1.6rem;color:var(--ivory);max-width:30em}
+.cover-lead{color:var(--acc2);font-weight:400}
+.cover-fig{position:relative}
+.fig-no{position:absolute;top:-3rem;left:-1rem;font-family:"Playfair Display",serif;font-size:6rem;color:var(--line);z-index:0}
+.fig-img{position:relative;z-index:1;aspect-ratio:3/4.1;border-radius:200px 200px 8px 8px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.fig-img img{width:100%;height:100%;object-fit:cover}
+.fig-cap{display:block;margin-top:1rem;font-family:"Jost",sans-serif;font-size:.74rem;letter-spacing:.18em;color:var(--mut);text-align:right}
+/* BLEED (about) */
+.bleed{display:grid;grid-template-columns:.92fr 1.08fr;gap:0;align-items:stretch;padding:0}
+.bleed-img{position:relative;min-height:80vh;overflow:hidden}
+.bleed-img img{width:100%;height:100%;object-fit:cover}
+.bleed-txt{padding:7rem clamp(2rem,5vw,5rem);display:flex;flex-direction:column;justify-content:center}
+/* STATEMENT */
+.statement{min-height:70vh;display:flex;align-items:center}
+.statement.right{justify-content:flex-end;text-align:right}
+.statement.right .lab{justify-content:flex-end}
+.ghost-no{position:absolute;top:8%;left:3%;font-family:"Playfair Display",serif;font-size:18rem;line-height:1;color:rgba(207,122,79,.08);z-index:0}
+.ghost-no.r{left:auto;right:3%}
+.statement-in{position:relative;z-index:1;max-width:760px}
+/* OFFER */
+.offer-head{max-width:680px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:3rem;border-top:1px solid var(--line)}
+.fct{padding:2rem 1rem;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.fct:last-child{border-right:none}
+.fct b{font-family:"Playfair Display",serif;font-size:3rem;color:var(--acc2);line-height:1}
+.fct small{font-size:.9rem;color:var(--acc2)}
+.fct span{display:block;margin-top:.6rem;font-family:"Jost",sans-serif;font-size:.8rem;color:var(--mut)}
+/* CONTENTS index list */
+.cn-head{max-width:680px;margin-bottom:2.5rem}.cn-lead{color:var(--acc2)}
+.idx-list{border-top:1px solid var(--line)}
+.idx-row{display:grid;grid-template-columns:64px 1fr 1.3fr;gap:1.2rem;align-items:baseline;padding:1.6rem .3rem;
+border-bottom:1px solid var(--line);text-decoration:none;color:var(--ivory);transition:.3s}
+.idx-row:hover{background:rgba(207,122,79,.07);padding-left:1.2rem}
+.ir-no{font-family:"Playfair Display",serif;font-size:1.5rem;color:var(--acc)}
+.ir-t{font-family:"Playfair Display","Noto Serif JP",serif;font-size:1.2rem}
+.ir-d{font-size:.86rem;color:var(--mut)}
+/* OUTLINE */
+.ol-head{margin-bottom:2rem}
+.ol-table{border-top:1px solid var(--line);max-width:760px}
+.ol-table div{display:grid;grid-template-columns:140px 1fr;gap:1rem;padding:1.3rem .3rem;border-bottom:1px solid var(--line)}
+.ol-table dt{font-family:"Jost",sans-serif;font-size:.82rem;letter-spacing:.12em;color:var(--acc2)}
+.ol-table dd{font-size:1rem}
+/* BREAK (full image) */
+.break{padding:0}
+.break-img{position:relative;min-height:88vh;background-size:cover;background-position:center;display:flex;align-items:flex-end}
+.break-img::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(20,18,15,.1),rgba(20,18,15,.82))}
+.break-cap{position:relative;z-index:2;padding:clamp(2rem,5vw,5rem);max-width:680px}
+.break-cap h2{color:#fff}.break-cap p{color:#ece4d6}
+/* VIENNA stage */
+.vstage{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.vstage-fig{position:relative;min-height:560px}
+.vglow{position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,rgba(207,122,79,.22),transparent 65%);animation:pulse 6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+.vimg{position:absolute;width:66%;overflow:hidden;border-radius:4px;box-shadow:0 30px 60px rgba(0,0,0,.55);border:1px solid var(--line)}
+.vimg img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.vimg.a{top:0;left:0;transform:rotate(-5deg);z-index:1}
+.vimg.b{bottom:0;right:0;transform:rotate(4.5deg);z-index:3}
+.vstage-txt h2{color:var(--acc2)}
+/* PRICE */
+.price{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.pb-k{font-family:"Jost",sans-serif;letter-spacing:.24em;font-size:.76rem;color:var(--acc2)}
+.pb-num{font-family:"Playfair Display",serif;font-size:clamp(4rem,9vw,7rem);line-height:1;color:var(--ivory);margin:.6rem 0}
+.pb-num small{font-size:1.4rem;color:var(--mut);margin-right:.4rem;font-family:"Noto Serif JP"}
+.pb-num em{font-style:normal;font-size:2rem}
+.pb-sub{font-family:"Jost",sans-serif;font-size:.86rem;color:var(--mut);letter-spacing:.1em}
+/* SELECTION */
+.selection{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+.sl-steps{list-style:none}
+.sl-steps li{display:flex;gap:1.2rem;align-items:baseline;padding:1.4rem 0;border-bottom:1px solid var(--line);font-size:1.02rem}
+.sl-steps li span{font-family:"Playfair Display",serif;font-size:1.6rem;color:var(--acc)}
+/* PROFILE */
+.profile{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.pf-img{aspect-ratio:1/1;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5);max-width:420px}
+.pf-img img{width:100%;height:100%;object-fit:cover}
+.pf-stats{display:flex;gap:1.5rem;margin-top:2rem;flex-wrap:wrap}
+.pf-stats div{border-left:2px solid var(--acc);padding-left:1rem}
+.pf-stats b{font-family:"Playfair Display",serif;font-size:1.6rem;color:var(--acc2);display:block;line-height:1.2}
+.pf-stats small{font-size:.85rem}
+.pf-stats span{font-family:"Jost",sans-serif;font-size:.74rem;color:var(--mut)}
+/* TRANSFORM */
+.tf-ba{display:grid;grid-template-columns:1fr auto 1fr;gap:1.6rem;align-items:center;margin-top:2rem}
+.ba{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:8px;padding:2rem 1.7rem}
+.ba span{font-family:"Jost",sans-serif;font-size:.72rem;letter-spacing:.16em;padding:.2em .9em;border-radius:30px;display:inline-block;margin-bottom:.9rem}
+.b1 span{background:var(--line);color:var(--mut)}.b2{border-color:var(--acc)}.b2 span{background:var(--acc);color:#1d1b17}
+.ba p{font-size:.92rem;margin:0}.ba-ar{color:var(--acc);font-size:1.6rem}
+/* VOICE */
+.vq-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem}
+.vq{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:8px;padding:2.2rem 1.8rem;position:relative}
+.vq:nth-child(2){transform:translateY(28px)}
+.vq::before{content:"“";position:absolute;top:.2rem;left:1rem;font-family:"Playfair Display",serif;font-size:3.5rem;color:var(--acc);opacity:.4}
+.vq blockquote{font-size:.98rem;margin:1rem 0 1rem;position:relative;z-index:1}
+.vq figcaption{font-family:"Jost",sans-serif;font-size:.78rem;color:var(--mut)}
+/* PROMISE */
+.pm-rows{margin-top:2rem;border-top:1px solid var(--line)}
+.pm{display:grid;grid-template-columns:80px 200px 1fr;gap:1.2rem;align-items:baseline;padding:1.8rem .3rem;border-bottom:1px solid var(--line)}
+.pm-no{font-family:"Playfair Display",serif;font-size:1.8rem;color:var(--acc)}
+.pm h3{font-size:1.2rem}.pm p{font-size:.9rem;color:var(--mut);margin:0}
+/* FAQ */
+.fq-list{margin-top:2rem;max-width:860px}
+.fq-list details{border-bottom:1px solid var(--line)}
+.fq-list summary{list-style:none;cursor:pointer;padding:1.4rem .2rem;font-family:"Playfair Display","Noto Serif JP",serif;
+font-size:1.05rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.fq-list summary::-webkit-details-marker{display:none}
+.fq-list summary i{position:relative;width:14px;height:14px;flex:none}
+.fq-list summary i::before,.fq-list summary i::after{content:"";position:absolute;background:var(--acc);top:50%;left:50%;transition:.3s}
+.fq-list summary i::before{width:14px;height:1.5px;transform:translate(-50%,-50%)}
+.fq-list summary i::after{width:1.5px;height:14px;transform:translate(-50%,-50%)}
+.fq-list details[open] summary i::after{transform:translate(-50%,-50%) scaleY(0)}
+.fq-a{padding:0 .2rem 1.5rem}.fq-a p{color:var(--mut);font-size:.92rem;margin:0}
+/* CLOSING */
+.closing{min-height:80vh;display:flex;align-items:center;background-size:cover;background-position:center}
+.cl-in{max-width:720px;position:relative;z-index:2}
+/* TRIAL */
+.trial{background:var(--ink)!important}
+.tr-in{max-width:620px}
+.tr-price{margin-top:1.4rem;font-family:"Playfair Display",serif;font-size:1.3rem;color:var(--acc2)}
+.tr-price b{font-size:2.4rem}
+/* progress + mobile cta */
+.progress{position:fixed;top:0;left:250px;right:0;height:2px;background:var(--acc);transform-origin:left;transform:scaleX(0);z-index:50}
+.m-cta{display:none}
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:980px){
+.rail{position:static;width:auto;height:auto;flex-direction:row;align-items:center;justify-content:space-between;padding:1rem 1.2rem;border-right:none;border-bottom:1px solid var(--line);position:sticky;top:0}
+.rail-idx,.rail-fine{display:none}.rail-cta{margin:0}
+.canvas{margin-left:0}.progress{left:0}
+.cover-grid,.bleed,.vstage,.price,.selection,.profile{grid-template-columns:1fr}
+.bleed-img{min-height:50vh}.bleed-txt{padding:3rem 1.5rem}
+.facts,.vq-wrap{grid-template-columns:1fr}.tf-ba{grid-template-columns:1fr}.ba-ar{transform:rotate(90deg)}
+.vstage-fig{min-height:440px}.statement.right{text-align:left}.pm{grid-template-columns:60px 1fr}
+}
+</style></head>
+<body class="atl" id="top">
+<aside class="rail">
+  <a class="rail-brand" href="#top">諏内えみ<span>UCHIDESHI</span></a>
+  <nav class="rail-idx"><a href="#sec4" data-target="sec4"><span>01</span>内弟子という選択</a><a href="#sec5" data-target="sec5"><span>02</span>講座内容</a><a href="#sec6" data-target="sec6"><span>03</span>開催概要</a><a href="#sec7" data-target="sec7"><span>04</span>その先の景色</a><a href="#sec8" data-target="sec8"><span>05</span>ウィーン</a><a href="#sec10" data-target="sec10"><span>06</span>受講料</a><a href="#sec12" data-target="sec12"><span>07</span>講師紹介</a><a href="#sec16" data-target="sec16"><span>08</span>Q&amp;A</a></nav>
+  <a class="ink-btn rail-cta" href="#apply">応募する<i>→</i></a>
+  <p class="rail-fine">2026年9月 開校<br>少人数・エントリー審査制</p>
+</aside>
+<div class="progress"></div>
+<main class="canvas">
+
+<section class="spread cover" id="sec1">
+  <div class="cover-grid">
+    <div class="cover-txt reveal">
+      <span class="cover-kick">SUNAI EMI &nbsp;/&nbsp; UCHIDESHI &nbsp;2026</span>
+      <h1>いつか、と思っていたあなたへ。育ちは、いつからでも、間に合う。</h1>
+      <p class="cover-sub">本のページの向こうに、画面の向こうに。ずっと、あの品に、静かに憧れてきた。</p>
+      <p class="cover-lead"></p>
+      <a class="ink-btn" href="#apply">一期生に応募する<i>→</i></a>
+    </div>
+    <div class="cover-fig reveal">
+      <span class="fig-no">01</span>
+      <div class="fig-img"><img src="img/sensei.png" alt="諏内えみ"><span class="imgtag">仮画像</span></div>
+      <span class="fig-cap">内弟子 一期生 ・ 3ヶ月</span>
+    </div>
+  </div>
+</section>
+<section class="spread bleed" id="sec2">
+  <div class="bleed-img reveal"><img src="img/sensei.png" alt=""><span class="imgtag">仮画像</span></div>
+  <div class="bleed-txt reveal">
+    <div class="lab"><span class="lab-en">ABOUT</span><span class="lab-ja">先生のこと</span></div>
+    <h2>あなたは、もう、知っている。</h2>
+    <p>『育ちがいい人』のページをめくった、あの夜のこと。あの所作の、静かな美しさ。</p>
+<p>ずっと先生に触れてきたあなたは、もう、知っているはずです——本物の品とは、どういうものかを。</p>
+<p>知っているのに、まだ、自分のものにはなっていない。その、ほんの少しの距離を、今日、縮めにいきましょう。</p>
+  </div>
+</section>
+<section class="spread statement" id="sec3">
+  <span class="ghost-no">02</span>
+  <div class="statement-in reveal">
+    <div class="lab"><span class="lab-en">STORY</span><span class="lab-ja">あなたへ</span></div>
+    <h2 class="serif-xl">けれど、ずっと、見ているだけだった。</h2>
+    <p>憧れながら、どこかで思っていませんでしたか。「あの方は、生まれが違うから」「私には、まだ早い」と。</p>
+<p>一歩を踏み出せないまま、義実家の食卓で、また背筋がこわばる。子どもの面接が近づくほど、見られているのは自分かもしれないと、静かに眠れなくなる。</p>
+<p class="lead">憧れは、見ているだけでは、自分のものには、なりません。</p>
+  </div>
+</section>
+<section class="spread offer" id="sec4">
+  <div class="offer-head reveal"><div class="lab"><span class="lab-en">PROGRAM</span><span class="lab-ja">内弟子という選択</span></div><h2>「内弟子」という、静かな選択。</h2><p>このたび9月、諏内えみが、ごく少人数の「内弟子」を迎えます。</p>
+<p>本やテレビの向こうにいた家元に、3ヶ月、じかに師事する。あなたの所作を、家元が、自分の目で見て、一つずつ整えていく。</p>
+<p class="lead">ずっと憧れてきたその人の、すぐ隣で。それが、内弟子です。</p></div>
+  <div class="facts reveal">
+    <div class="fct"><b>3</b><small>ヶ月</small><span>家元に直接師事</span></div>
+    <div class="fct"><b>9</b><small>月開校</small><span>2026年 <i class="flag">仮</i></span></div>
+    <div class="fct"><b>少</b><small>人数</small><span>一期生・審査制</span></div>
+  </div>
+</section>
+<section class="spread contents" id="sec5">
+  <div class="cn-head reveal"><div class="lab"><span class="lab-en">CONTENTS</span><span class="lab-ja">講座内容</span></div><h2>この3ヶ月に、含まれているもの。</h2><p class="cn-lead"></p></div>
+  <div class="idx-list"><a class="idx-row reveal"><span class="ir-no">01</span><span class="ir-t">型のすべて</span><span class="ir-d">およそ250項目を、順を追って、ていねいに。</span></a><a class="idx-row reveal"><span class="ir-no">02</span><span class="ir-t">実践のワーク</span><span class="ir-d">身体に入るまで。</span></a><a class="idx-row reveal"><span class="ir-no">03</span><span class="ir-t">個別の添削</span><span class="ir-d">あなたの所作を、家元が、一つずつ。</span></a><a class="idx-row reveal"><span class="ir-no">04</span><span class="ir-t">同じ志の、同期。</span><span class="ir-d"></span></a><a class="idx-row reveal"><span class="ir-no">05</span><span class="ir-t">そして、家元による、直接の指導。</span><span class="ir-d"></span></a></div>
+</section>
+<section class="spread outline" id="sec6">
+  <div class="ol-head reveal"><div class="lab"><span class="lab-en">OUTLINE</span><span class="lab-ja">開催概要</span></div><h2>いつ、どこで、どう学ぶか。<span class="flag">仮</span></h2></div>
+  <dl class="ol-table reveal">
+    <div><dt>開講</dt><dd>2026年 9月 <i class="flag">仮</i></dd></div>
+    <div><dt>形式</dt><dd>対面 ◯回 ＋ オンライン ◯回 <i class="flag">仮</i></dd></div>
+    <div><dt>期間</dt><dd>3ヶ月（家元に直接師事）</dd></div>
+    <div><dt>定員</dt><dd>◯名・エントリー審査制 <i class="flag">仮</i></dd></div>
+  </dl>
+</section>
+<section class="spread break" id="sec7">
+  <div class="break-img reveal" style="background-image:url('img/sensei.png')"><span class="imgtag">仮画像</span>
+    <div class="break-cap">
+      <div class="lab"><span class="lab-en">FUTURE</span><span class="lab-ja">その先の景色</span></div>
+      <h2 class="light">身につけた品は、いちばん大切な場面で、あなたを助けます。</h2>
+      <p>義実家の食事会で、もう、こわばらない。子どもの面接で、背筋を伸ばし、落ち着いた声で。式典でも、誰に見られても、揺るがない。</p>
+<p>品とは、見せるためのものではなく、いちばん緊張する場面で、あなたを静かに守るものです。</p>
+    </div>
+  </div>
+</section>
+<section class="spread vstage" id="sec8">
+  <div class="vstage-fig reveal">
+    <div class="vglow"></div>
+    <div class="vimg a"><img src="img/sensei.png" alt="" style="object-position:72% center"></div>
+    <div class="vimg b"><img src="img/sensei.png" alt="" style="object-position:28% center"><span class="imgtag">仮画像</span></div>
+  </div>
+  <div class="vstage-txt reveal">
+    <div class="lab"><span class="lab-en">SPECIAL STAGE</span><span class="lab-ja">その先にある舞台</span></div>
+    <h2>育ちを極めた、その先に。<span class="flag">仮</span></h2>
+    <p>育ちを学び、品が、ごく自然に身についた、その先には——たとえば、ウィーン。</p>
+<p>歴史ある宮殿で開かれる、社交界の舞踏会。白いドレスをまとい、その夜の主役のひとりとして、ひとつの世界に立つ。</p>
+<p>そんな景色も、あなたの人生の地続きに、あるのかもしれません。</p><p class="note">※ご参加は本科とは別のご案内です。</p>
+  </div>
+</section>
+<section class="spread statement right" id="sec9">
+  <span class="ghost-no r">03</span>
+  <div class="statement-in reveal">
+    <div class="lab"><span class="lab-en">STORY</span><span class="lab-ja">このままでいいですか</span></div>
+    <h2 class="serif-xl">「いつか」は、待っていても、来ません。</h2>
+    <p>「いつか、先生のように」と思い続けて、何年が、過ぎたでしょう。</p>
+<p>見ているだけなら、その景色は、これからもずっと、向こう側のまま。来年も、同じ場所で、半歩、引いてしまう。</p>
+<p>そして、その姿を、いちばん見せたくないのは、ほかでもない、あの子かもしれません。</p>
+<p class="lead">変わらないことのほうが、本当は、惜しい。</p>
+  </div>
+</section>
+<section class="spread price" id="sec10">
+  <div class="price-big reveal">
+    <span class="pb-k">受講料 ／ PRICE</span>
+    <div class="pb-num"><small>総額</small>25<em>万円</em></div>
+    <span class="pb-sub">3ヶ月 ／ 一括</span>
+  </div>
+  <div class="price-dtl reveal">
+    <h2>だからこそ、この3ヶ月を。総額25万円。</h2>
+    <p>家元による、直接の指導。およそ250項目の型。お一人おひとりへの、個別の添削。</p><p>一生のあいだ、あらゆる場面で、あなたを静かに支えつづける品を思えば。それは、消えてしまう買いものではなく、自分への、確かな贈りものです。</p>
+    <a class="ink-btn" href="#apply">一期生に応募する<i>→</i></a>
+    <p class="note">※ お支払い方法は確定後にご案内します（仮）。この時点でお支払いは発生しません。</p>
+  </div>
+</section>
+<section class="spread selection" id="sec11">
+  <div class="sl-head reveal"><div class="lab"><span class="lab-en">SELECTION</span><span class="lab-ja">選考について</span></div><h2>誰でも、ではなく。「あなただから」。<span class="flag">仮</span></h2><p>内弟子は、◯名の、エントリー審査制です。家元が、お一人おひとりを、自分の目で見るため。</p>
+<p class="lead">これは、ふるい落とすための審査では、ありません。ずっと憧れ、本気で変わりたいと願ってきたあなたを、「あなただから」と、お迎えするための、静かな約束です。</p></div>
+  <ol class="sl-steps reveal">
+    <li><span>01</span>エントリー（応募フォーム）</li>
+    <li><span>02</span>かんたんなご質問への記入</li>
+    <li><span>03</span>家元による確認・ご連絡</li>
+    <li><span>04</span>お手続き・受講開始</li>
+  </ol>
+</section>
+<section class="spread profile" id="sec12">
+  <div class="pf-fig reveal"><div class="pf-img"><img src="img/sensei.png" alt="諏内えみ"><span class="imgtag">仮画像</span></div></div>
+  <div class="pf-txt reveal">
+    <div class="lab"><span class="lab-en">PROFILE</span><span class="lab-ja">講師紹介</span></div>
+    <h2>育ちの「家元」が、あなたに、伴走します。<span class="flag">仮</span></h2>
+    <p>諏内えみ。皇室や各界のVIPをお迎えするVIPアテンダントとして品格を磨き、著書『「育ちがいい人」だけが知っていること』（ダイヤモンド社）は、2020年、最も売れたマナー本となりました。シリーズ累計は70万部を上回ります。</p>
+<p>その家元が、なぜ、はじめて、じかに教えるのか。——所作は、その人の一生を変える。その瞬間に、何度も立ち会ってきたから、伝えつづけています。「あなたは、変われる」と。</p>
+    <div class="pf-stats">
+      <div><b>70<small>万部</small></b><span>シリーズ累計</span></div>
+      <div><b>2020<small>年</small></b><span>最も売れたマナー本</span></div>
+      <div><b>皇室・各界</b><span>VIPをアテンド</span></div>
+    </div>
+  </div>
+</section>
+<section class="spread transform" id="sec13">
+  <div class="tf-head reveal"><div class="lab"><span class="lab-en">RESULTS</span><span class="lab-ja">変化の実例</span></div><h2>「私には無理」と思っていた方ほど、静かに、変わっていきます。<span class="flag">仮</span></h2></div>
+  <div class="tf-ba reveal">
+    <div class="ba b1"><span>Before</span><p>人前が苦手で、義母の前ではいつも緊張ばかり。「私なんて」が口ぐせだった。</p></div>
+    <div class="ba-ar">→</div>
+    <div class="ba b2"><span>After</span><p>いつのまにか一目置かれ、自ら登壇の場へ。変わったのは性格ではなく、ふるまい。</p></div>
+  </div>
+  <p class="note">※ 実話に基づく一例です。先生のご確認のうえ確定します。<i class="flag">仮</i></p>
+</section>
+<section class="spread voice" id="sec14">
+  <div class="vc-head reveal"><div class="lab"><span class="lab-en">VOICE</span><span class="lab-ja">受講生の声</span></div><h2>受け取った方が、そっと残してくれた、声。<span class="flag">仮</span></h2>
+  <p class="note">※ 掲載内容はダミーです。既存スクール受講生のお声を、ご許諾のうえ掲載します。</p></div>
+  <div class="vq-wrap"><figure class="vq reveal"><blockquote>所作が変わると、自分への見られ方まで変わると実感しました。</blockquote><figcaption>40代・経営者 K様</figcaption></figure><figure class="vq reveal"><blockquote>「育ちは変えられる」。その言葉に背中を押されました。</blockquote><figcaption>30代・会社員 M様</figcaption></figure><figure class="vq reveal"><blockquote>義実家の食事会が、もう怖くありません。</blockquote><figcaption>40代・主婦 S様</figcaption></figure></div>
+</section>
+<section class="spread promise" id="sec15">
+  <div class="pm-head reveal"><div class="lab"><span class="lab-en">PROMISE</span><span class="lab-ja">お約束</span></div><h2>はじめての方へ、いくつかの、お約束。</h2></div>
+  <div class="pm-rows"><div class="pm reveal"><span class="pm-no">01</span><h3>相談</h3><p>迷われたら、まず家元へ。理由をうかがいます。</p></div><div class="pm reveal"><span class="pm-no">02</span><h3>補講</h3><p>必要と認めた場合は、無料の補講をご用意。</p></div><div class="pm reveal"><span class="pm-no">03</span><h3>伴走</h3><p>「これでいい」と思えるまで、最後まで。</p></div></div>
+</section>
+<section class="spread faq" id="sec16">
+  <div class="fq-head reveal"><div class="lab"><span class="lab-en">Q&A</span><span class="lab-ja">よくあるご質問</span></div><h2>おそらく、いま、感じていること。<span class="flag">仮</span></h2></div>
+  <div class="fq-list"><details class="reveal"><summary>忙しくても、続けられるでしょうか。<i></i></summary><div class="fq-a"><p>無理なく続けていただける形を、整えています。（※詳細は確定後に。）</p></div></details><details class="reveal"><summary>本当に、変われるのでしょうか。<i></i></summary><div class="fq-a"><p>品は、才能ではなく、型です。知り、なぞれば、必ず、にじみ出てきます。</p></div></details><details class="reveal"><summary>お支払いについて。<i></i></summary><div class="fq-a"><p>（※確定後に、ご案内します。）</p></div></details><details class="reveal"><summary>審査が、不安です。<i></i></summary><div class="fq-a"><p>今のあなたを、試すものではありません。「変わりたい」という、静かなお気持ちだけを、うかがっています。</p></div></details></div>
+</section>
+<section class="spread closing" id="apply" style="background-image:linear-gradient(rgba(20,18,15,.6),rgba(20,18,15,.78)),url('img/sensei.png')">
+  <span class="imgtag">仮画像</span>
+  <div class="cl-in reveal">
+    <h2 class="light serif-xl">あなたは、ずっと、ちゃんとしていた。さあ、いつ、なさいますか。</h2>
+    <p>ずっと憧れてきた、その「いつか」。それを「今日」に変えられるのは、あなただけです。</p>
+<p>あなたに足りなかったのは、品ではありません。ただ、最後の一歩を、まだ、踏み出していなかっただけ。</p>
+<p class="lead">その一歩を、家元と、ここで、静かに。</p>
+    <a class="ink-btn light" href="#">一期生に応募する<i>→</i></a>
+    <p class="note light">※ この時点で、お支払いは発生しません。</p>
+  </div>
+</section>
+<section class="spread trial" id="sec18">
+  <div class="tr-in reveal">
+    <div class="lab"><span class="lab-en">TRIAL</span><span class="lab-ja">見習い制度</span></div>
+    <h3>「今期は、見送る」という方も。</h3>
+    <p>「今はまだ、内弟子までは、踏み切れない」——その気持ちも、自然なことです。</p>
+<p>まずは月額1万円の「見習い」から、この世界観の中に、静かに、身を置いてみてください。出入りは、自由です。あなたのペースで、一歩目を。</p>
+    <div class="tr-price">月額 <b>1</b>万円 ／ 出入り自由</div>
+  </div>
+</section>
+<footer class="spread" style="text-align:center;background:#141210">
+  <p style="font-family:'Playfair Display',serif;font-size:1.2rem;letter-spacing:.1em">諏内えみ ｜ 内弟子 一期生 募集</p>
+  <p class="note" style="max-width:640px;margin:1rem auto 0">本ページはデザイン確認用ラフです。「仮」表記の箇所（開催日程・定員・受講生の声・先生の想い・写真）は確定後に差し替えます。</p>
+</footer>
+</main>
+<script>
+const obs=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const links=[...document.querySelectorAll('.rail-idx a')];
+const spy=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;links.forEach(a=>a.classList.toggle('on',a.dataset.target===id));}}),{rootMargin:'-45% 0px -50% 0px'});
+links.forEach(a=>{const t=document.getElementById(a.dataset.target);if(t)spy.observe(t);});
+const bar=document.querySelector('.progress');
+addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight);bar.style.transform='scaleX('+p+')';},{passive:true});
+</script>
+</body></html>

@@ -222,6 +222,24 @@ background:var(--bar-bg);padding:.85rem 1.2rem;transform:translateY(110%);transi
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;transition-delay:var(--d,0ms)}
 .reveal.in{opacity:1;transform:none}
 
+/* ===== 交互スプリット（FUTURE / PAIN） ===== */
+.altimg{padding:6.5rem 1.5rem}
+.altimg .media img{min-height:420px}
+.altimg.tinted{background:var(--bg2)}
+/* ===== ウィーン：斜め2枚重ね ===== */
+.vsplit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;
+max-width:1180px;margin:0 auto;padding:8rem 1.5rem;background:var(--bg2)}
+.vsplit .vbody h2{color:var(--accent-d)}
+.vsplit .vbody .lead{color:var(--accent)}
+.diag-wrap{position:relative;min-height:520px}
+.vglow{position:absolute;inset:6% 6%;border-radius:50%;background:radial-gradient(circle,rgba(216,184,115,.22),transparent 65%);z-index:0;animation:pulse 6s ease-in-out infinite}
+.diag-img{position:absolute;width:64%;overflow:hidden;border-radius:3px;box-shadow:0 26px 56px rgba(0,0,0,.5);border:1px solid var(--line)}
+.diag-img img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.diag-img.a{top:0;left:0;transform:rotate(-5deg);z-index:1}
+.diag-img.b{bottom:0;right:0;transform:rotate(4.5deg);z-index:3}
+.diag-img.b .imgtag{top:12px;left:12px}
+@media(max-width:780px){.vsplit{grid-template-columns:1fr}.diag-wrap{min-height:440px;margin-top:1rem}.diag-img{width:70%}}
+
 :root{
 --serif:"Noto Serif JP",serif;--display:"Cormorant Garamond","Noto Serif JP",serif;--sans:"Cinzel","Jost",sans-serif;
 --bg:#0a0f24;--bg2:#0d1430;--surface:rgba(255,255,255,.04);--text:#e8e3d6;--muted:#9aa0bd;
@@ -329,39 +347,27 @@ h1,h2,h3,h4{letter-spacing:.04em}
     <p class="o-note">※ 開催形式・日程・定員は確定し次第、こちらに明記します。</p>
   </div>
 </section>
+<section class="sec split img-left"><div class="media"><img src="img/sensei.png" alt="諏内えみ"><span class="imgtag">仮画像</span></div><div class="col-body reveal"><div class="kicker"><span class="k-en">FUTURE</span><span class="k-ja">その先の景色</span></div><h2>その品は、いちばん大切な場面で、あなたを助けます。</h2><p>義実家の食事会で、ふと一目置かれる。子どもの面接で、親子そろって品が伝わる。式典で、誰よりも堂々と。</p>
+<p class="lead">憧れていた「あちら側」は、あなたの毎日の、すぐ隣に、もう続いています。</p></div></section>
 
-<section class="sec bgsec reveal" style="background-image:linear-gradient(var(--bg-grad)),url('img/sensei.png')">
-  <span class="imgtag">仮画像</span>
-  <div class="wrap narrow center bg-inner">
-    <div class="kicker"><span class="k-en">FUTURE</span><span class="k-ja">その先の景色</span></div>
-    <h2 class="big light">その品は、いちばん大切な場面で、あなたを助けます。</h2>
-    <p>義実家の食事会で、ふと一目置かれる。子どもの面接で、親子そろって品が伝わる。式典で、誰よりも堂々と。</p>
-<p class="lead">憧れていた「あちら側」は、あなたの毎日の、すぐ隣に、もう続いています。</p>
-  </div>
-</section>
-
-<section class="sec vienna reveal" style="background-image:linear-gradient(var(--vienna-grad)),url('img/sensei.png')">
-  <div class="vienna-glow"></div>
-  <span class="imgtag">仮画像</span>
-  <div class="wrap narrow center vienna-inner">
+<section class="sec vsplit reveal" id="stage">
+  <div class="vbody">
     <div class="kicker"><span class="k-en">SPECIAL STAGE</span><span class="k-ja">その先にある舞台</span></div>
-    <h2 class="big light serif-em">そして、その先には——ウィーンの舞踏会。</h2>
+    <h2 class="big">そして、その先には——ウィーンの舞踏会。</h2>
     <p>育ちが身につくと、毎日の景色が変わります。憧れのレストランやホテルで、自然と上客として扱われる。同窓会では、場の華に。お見合いや婚活では、ふさわしい人と出会える。義実家の食事会で一目置かれ、お子さまの面接では品が伝わる。式典でも、堂々と。</p>
 <p>そして、その先には——ウィーンの宮殿で開かれる社交界の舞踏会という世界も、待っています。無数のシャンデリア、白いドレス。その夜の主役として、フロアの中央へ。</p>
 <p>かつて遠くから見つめていた、あの場面の中に、あなた自身が立つ。それは、夢物語ではありません。今日の小さな一歩から、地続きに続いています。</p>
     <p class="sm-note">※ウィーンの舞踏会への参加について詳しくは、本科の中でお伝えします。</p>
   </div>
-</section>
-
-<section class="sec pain reveal">
-  <div class="wrap narrow center">
-    <div class="kicker"><span class="k-en">STORY</span><span class="k-ja">このままでいいですか</span></div>
-    <h2 class="big">憧れているだけの「いつか」は、来ません。</h2>
-    <p>「いつか、先生のように」と思い続けて、何年が過ぎたでしょう。見ているだけなら、その景色は、これからもずっと、ガラスの外。来年も、同じ場所で、半歩引く。</p>
-<p>そして、その半歩引く姿を、いちばん見せたくない相手がいるはずです。ほかでもない、あの子かもしれません。あるいは、いつも近くにいる、大切な女友達かもしれません。</p>
-<p class="lead big-lead">変わらないことのほうが、本当は、惜しい。</p>
+  <div class="diag-wrap">
+    <div class="vglow"></div>
+    <div class="diag-img a"><img src="img/sensei.png" alt="" style="object-position:70% center"></div>
+    <div class="diag-img b"><img src="img/sensei.png" alt="" style="object-position:30% center"><span class="imgtag">仮画像</span></div>
   </div>
 </section>
+<section class="sec split img-left"><div class="media"><img src="img/sensei.png" alt="諏内えみ"><span class="imgtag">仮画像</span></div><div class="col-body reveal"><div class="kicker"><span class="k-en">STORY</span><span class="k-ja">このままでいいですか</span></div><h2>憧れているだけの「いつか」は、来ません。</h2><p>「いつか、先生のように」と思い続けて、何年が過ぎたでしょう。見ているだけなら、その景色は、これからもずっと、ガラスの外。来年も、同じ場所で、半歩引く。</p>
+<p>そして、その半歩引く姿を、いちばん見せたくない相手がいるはずです。ほかでもない、あの子かもしれません。あるいは、いつも近くにいる、大切な女友達かもしれません。</p>
+<p class="lead">変わらないことのほうが、本当は、惜しい。</p></div></section>
 
 <section class="sec price-sec reveal" id="price">
   <div class="wrap narrow center">

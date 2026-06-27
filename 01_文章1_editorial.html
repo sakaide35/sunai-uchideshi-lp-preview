@@ -222,6 +222,24 @@ background:var(--bar-bg);padding:.85rem 1.2rem;transform:translateY(110%);transi
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;transition-delay:var(--d,0ms)}
 .reveal.in{opacity:1;transform:none}
 
+/* ===== 交互スプリット（FUTURE / PAIN） ===== */
+.altimg{padding:6.5rem 1.5rem}
+.altimg .media img{min-height:420px}
+.altimg.tinted{background:var(--bg2)}
+/* ===== ウィーン：斜め2枚重ね ===== */
+.vsplit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;
+max-width:1180px;margin:0 auto;padding:8rem 1.5rem;background:var(--bg2)}
+.vsplit .vbody h2{color:var(--accent-d)}
+.vsplit .vbody .lead{color:var(--accent)}
+.diag-wrap{position:relative;min-height:520px}
+.vglow{position:absolute;inset:6% 6%;border-radius:50%;background:radial-gradient(circle,rgba(216,184,115,.22),transparent 65%);z-index:0;animation:pulse 6s ease-in-out infinite}
+.diag-img{position:absolute;width:64%;overflow:hidden;border-radius:3px;box-shadow:0 26px 56px rgba(0,0,0,.5);border:1px solid var(--line)}
+.diag-img img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.diag-img.a{top:0;left:0;transform:rotate(-5deg);z-index:1}
+.diag-img.b{bottom:0;right:0;transform:rotate(4.5deg);z-index:3}
+.diag-img.b .imgtag{top:12px;left:12px}
+@media(max-width:780px){.vsplit{grid-template-columns:1fr}.diag-wrap{min-height:440px;margin-top:1rem}.diag-img{width:70%}}
+
 :root{
 --serif:"Noto Serif JP",serif;--display:"Shippori Mincho",serif;--sans:"Jost","Noto Serif JP",sans-serif;
 --bg:#fbfaf7;--bg2:#f3efe8;--surface:#ffffff;--text:#2a2722;--muted:#857d70;
