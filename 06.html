@@ -40,9 +40,8 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 .split .fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s ease}
 .split:hover .fig img{transform:scale(1.04)}
 .split.rev .txt{order:2}.split.rev .fig{order:1}
-/* eq: 画像を固定比率(5:4)にして左右セクションで揃える */
-.split.eq{align-items:start}
-.split.eq .txt{align-self:start}
+/* eq: 画像を固定比率(5:4)にして左右セクションで揃える（縦は中央） */
+.split.eq{align-items:center}
 .split.eq .fig{aspect-ratio:5/4;min-height:0}
 @media(max-width:820px){.split{grid-template-columns:1fr;gap:1.6rem;align-items:stretch}.split.rev .txt{order:1}.split.rev .fig{order:2}.split .fig{min-height:0;aspect-ratio:4/3}.split.eq .fig{aspect-ratio:5/4}}
 /* 型などの一覧を横一列で下に */
@@ -184,6 +183,10 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 .imgband{width:100%;height:clamp(220px,34vw,440px);object-fit:cover;border-radius:3px}
 .tag{display:inline-block;font-family:Jost;font-size:.72rem;letter-spacing:.14em;color:var(--acc);border:1px solid var(--line2);border-radius:30px;padding:.32rem .95rem;margin-top:1rem}
 .center{text-align:center}
+/* 共感セクション：指定改行・行あたり文字数を広めに */
+.empathy{max-width:46em;margin:0 auto}
+.empathy p{max-width:none}
+.empathy p+p{margin-top:1.3em}
 /* メディア出演ストリップ（横一列・同一縦横比・小） */
 .mediastrip{margin-top:2.6rem;padding-top:1.9rem;border-top:1px solid var(--line)}
 .mediastrip .lb{font-family:"Jost",sans-serif;letter-spacing:.32em;font-size:.7rem;color:var(--acc);text-transform:uppercase;margin-bottom:1.05rem;text-align:center}
@@ -203,11 +206,7 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 <h1>そのシャンデリアの灯りの下に、いつか立つのは──あなたです。</h1>
 <p class="sub">育ちは、変えられる。あなたにも、あなたのお子さまにも。──諏内えみと過ごす3ヶ月、少人数の一期生「デビュタント（内弟子）」、2026年9月開講。</p>
 <div class="ctas center"><a class="btn btn-primary" href="#entry">一期生にエントリー（審査制）<span class="s">DEBUTANTE ・ 9月開講/3ヶ月</span></a><a class="btn btn-ghost" href="#auditor">見習いから始める<span class="s">AUDITOR ・ 月1万/出入り自由</span></a></div></div><div class="scroll">SCROLL</div></section>
-<section class="sec band band--tint"><div class="wrap reveal"><h2 class="h2"><span class="en">EMPATHY</span>ずっと、見ているだけだった。憧れたまま、半歩引いてきた。</h2><p class="">同窓会で。ずっと憧れていた、あの華やかな女性。その隣に立つと、心のどこかで羨ましく思いながら、自分のふるまいが、気になる。</p>
-<p class="">お見合いや、婚活の場でも。素敵な人を前にするほど——見られているのは器量より“育ち”かもしれないと、ふいに怖くなる。（うちなんて、全然です）（私の育ちは、普通だったので……）口癖のように、自分を一段下げてしまう。</p>
-<p class="">義実家の食事会でも、わが子のお受験の場面でも、同じ引け目が、ふっと顔を出す。</p>
-<p class="">いちばん見られたくない相手——憧れのあの人にこそ、自分の“育ち”が見透かされる。それが、こわい。</p>
-<p class="">もし、あなたがそうだとしたら。ここから先は、あなたのために書きました。</p></div></section>
+<section class="sec band band--tint"><div class="wrap reveal"><h2 class="h2"><span class="en">EMPATHY</span>ずっと、見ているだけだった。憧れたまま、半歩引いてきた。</h2><div class="empathy"><p>同窓会で。ずっと憧れていた、あの華やかな女性。<br>その隣に立つと、心のどこかで羨ましく思いながら、自分のふるまいが、気になる。<br>お見合いや、婚活の場でも。<br>素敵な人を前にするほど——<br>見られているのは器量より“育ち”かもしれないと、ふいに怖くなる。<br>（うちなんて、全然です）（私の育ちは、普通だったので……）<br>口癖のように、自分を一段下げてしまう。</p><p>義実家の食事会でも、わが子のお受験の場面でも、同じ引け目が、ふっと顔を出す。</p><p>いちばん見られたくない相手——<br>憧れのあの人にこそ、自分の“育ち”が見透かされる。それが、こわい。</p><p>もし、あなたがそうだとしたら。ここから先は、あなたのために書きました。</p></div></div></section>
 <section class="sec "><div class="wrap reveal"><div class="split"><div class="txt"><div class="chap">章 01</div><h2 class="h2"><span class="en">SENSEI ｜ 諏内えみとは</span>『育ちがいい人®』の生みの親。憧れの世界への、案内人。</h2><p class="">諏内えみ。マナー・所作・話し方の指導者として、いま最も信頼を集める一人です。</p>
 <p class="">著書『「育ちがいい人」だけが知っていること』（ダイヤモンド社）は、2020年から現在まで最も売れたマナー本となり、シリーズ累計は70万部を超えました。</p>
 <p class="">テレビ出演はメディア200本超——『世界一受けたい授業』『ホンマでっか!?TV』『王様のブランチ』『あさイチ』『ぐるナイ』ほか多数。雑誌『ゼクシィ』保存版「結婚マナー」を全監修し、各誌にも登場。人気ドラマ・映画で有名女優の所作指導も多数手がけています。皇室や政財界の要人を「お迎えする」VIPアテンダントも務めてきました。登録商標『育ちがいい人®』を持つ、育ちの第一人者です。</p>
