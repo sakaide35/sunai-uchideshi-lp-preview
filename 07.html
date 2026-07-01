@@ -83,11 +83,12 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 .scene .row p{font-size:.94rem}
 @media(max-width:560px){.scene .row{grid-template-columns:1fr;gap:.35rem;padding:1.2rem 1.3rem}.scene .row .t{font-size:.98rem}}
 /* vienna diagonal */
-.vdiag{position:relative;min-height:520px;margin-top:1rem}
-.vdiag .p1,.vdiag .p2{position:absolute;width:52%;border:8px solid #fff;box-shadow:0 24px 60px rgba(0,0,0,.4);border-radius:2px}
-.vdiag .p1{left:2%;top:0;transform:rotate(-5deg);z-index:2}
-.vdiag .p2{right:2%;bottom:0;transform:rotate(4deg);z-index:1}
-@media(max-width:820px){.vdiag{min-height:440px;margin:0 auto;max-width:420px}.vdiag .p1,.vdiag .p2{width:72%}.vdiag .p1{left:0;transform:rotate(-4deg)}.vdiag .p2{right:0;transform:rotate(3deg)}}
+.vdiag{position:relative;min-height:640px;margin-top:1rem}
+.vdiag .p1,.vdiag .p2,.vdiag .p3{position:absolute;width:52%;border:8px solid #fff;box-shadow:0 24px 60px rgba(0,0,0,.45);border-radius:2px}
+.vdiag .p1{left:0;top:0;transform:rotate(-5deg);z-index:1}
+.vdiag .p2{right:0;top:27%;transform:rotate(4deg);z-index:3}
+.vdiag .p3{left:12%;bottom:0;transform:rotate(-2deg);z-index:2}
+@media(max-width:820px){.vdiag{min-height:560px;margin:0 auto;max-width:420px}.vdiag .p1,.vdiag .p2,.vdiag .p3{width:64%}.vdiag .p1{left:0;transform:rotate(-4deg)}.vdiag .p2{right:0;top:30%;transform:rotate(3deg)}.vdiag .p3{left:16%;transform:rotate(-2deg)}}
 /* price */
 .price{max-width:640px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.1)}
 .price .top{background:var(--deep);color:#fff;text-align:center;padding:2.2rem 1.5rem}
