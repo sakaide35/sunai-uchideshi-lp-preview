@@ -83,7 +83,9 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 .scene .row p{font-size:.94rem}
 @media(max-width:560px){.scene .row{grid-template-columns:1fr;gap:.35rem;padding:1.2rem 1.3rem}.scene .row .t{font-size:.98rem}}
 /* vienna diagonal */
-.vdiag{position:relative;min-height:640px;margin-top:1rem}
+.vdiag{position:relative;min-height:640px}
+.split.vc{align-items:center}
+.vdcell{display:flex;align-items:center;justify-content:center}
 .vdiag .p1,.vdiag .p2,.vdiag .p3{position:absolute;width:52%;border:8px solid #fff;box-shadow:0 24px 60px rgba(0,0,0,.45);border-radius:2px}
 .vdiag .p1{left:0;top:0;transform:rotate(-5deg);z-index:1}
 .vdiag .p2{right:0;top:27%;transform:rotate(4deg);z-index:3}
