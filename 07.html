@@ -34,12 +34,13 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 .reveal{opacity:0;transform:translateY(34px);transition:opacity 1.1s cubic-bezier(.16,.7,.3,1),transform 1.1s cubic-bezier(.16,.7,.3,1)}
 .reveal.in{opacity:1;transform:none}
 /* split */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.split .fig{overflow:hidden;border-radius:3px}
-.split .fig img{width:100%;height:100%;object-fit:cover;min-height:340px;transition:transform 1.4s ease}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:stretch}
+.split .txt{align-self:center}
+.split .fig{position:relative;overflow:hidden;border-radius:3px;min-height:380px}
+.split .fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s ease}
 .split:hover .fig img{transform:scale(1.04)}
 .split.rev .txt{order:2}.split.rev .fig{order:1}
-@media(max-width:820px){.split{grid-template-columns:1fr;gap:1.8rem}.split.rev .txt{order:1}.split.rev .fig{order:2}.split .fig img{min-height:260px}}
+@media(max-width:820px){.split{grid-template-columns:1fr;gap:1.6rem;align-items:stretch}.split.rev .txt{order:1}.split.rev .fig{order:2}.split .fig{min-height:0;aspect-ratio:4/3}}
 /* chips */
 .chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
 .chips span{font-family:"Jost",sans-serif;font-size:.8rem;letter-spacing:.08em;padding:.5rem 1rem;border:1px solid var(--line);border-radius:40px;color:var(--ink);background:var(--panel)}
@@ -60,23 +61,25 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 .bgsec p{text-shadow:0 1px 14px rgba(0,0,0,.55)}
 .bgsec .eyebrow{color:var(--acclt)}
 /* cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.1rem;margin-top:2.2rem}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1.8rem 1.5rem;transition:.4s}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:1.1rem;margin-top:2.2rem}
+.card{flex:1 1 200px;max-width:236px;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:1.8rem 1.5rem;transition:.4s}
 .card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(0,0,0,.09)}
+@media(max-width:820px){.card{flex:1 1 100%;max-width:none}}
 .card .n{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--acc);font-size:1.4rem}
 .card h4{font-family:"Shippori Mincho",serif;font-weight:600;font-size:1.06rem;margin:.5rem 0 .7rem}
 .card p{font-size:.9rem}
 /* scene list */
 .scene{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;margin-top:2rem}
-.scene .row{background:var(--panel);padding:1.4rem 1.6rem;display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:baseline}
-.scene .row .t{font-family:"Shippori Mincho",serif;color:var(--acc);font-weight:600;white-space:nowrap}
+.scene .row{background:var(--panel);padding:1.4rem 1.7rem;display:grid;grid-template-columns:8.5em 1fr;gap:1.4rem;align-items:baseline;text-align:left}
+.scene .row .t{font-family:"Shippori Mincho",serif;color:var(--acc);font-weight:600}
 .scene .row p{font-size:.94rem}
+@media(max-width:560px){.scene .row{grid-template-columns:1fr;gap:.35rem;padding:1.2rem 1.3rem}.scene .row .t{font-size:.98rem}}
 /* vienna diagonal */
 .vdiag{position:relative;min-height:520px;margin-top:1rem}
 .vdiag .p1,.vdiag .p2{position:absolute;width:52%;border:8px solid #fff;box-shadow:0 24px 60px rgba(0,0,0,.4);border-radius:2px}
 .vdiag .p1{left:2%;top:0;transform:rotate(-5deg);z-index:2}
 .vdiag .p2{right:2%;bottom:0;transform:rotate(4deg);z-index:1}
-@media(max-width:820px){.vdiag{min-height:400px}.vdiag .p1,.vdiag .p2{width:66%}.vdiag .p1{left:0}.vdiag .p2{right:0}}
+@media(max-width:820px){.vdiag{min-height:440px;margin:0 auto;max-width:420px}.vdiag .p1,.vdiag .p2{width:72%}.vdiag .p1{left:0;transform:rotate(-4deg)}.vdiag .p2{right:0;transform:rotate(3deg)}}
 /* price */
 .price{max-width:640px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.1)}
 .price .top{background:var(--deep);color:#fff;text-align:center;padding:2.2rem 1.5rem}
@@ -116,9 +119,10 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 .quote p{font-family:"Shippori Mincho";font-size:1.08rem;font-weight:500;padding-top:1.2rem;line-height:1.9}
 .quote .who{font-family:"Jost";font-size:.8rem;letter-spacing:.1em;color:var(--acc);margin-top:1rem}
 /* profile stats */
-.stats{display:flex;gap:2.2rem;flex-wrap:wrap;margin-top:1.5rem}
+.stats{display:flex;gap:2rem;flex-wrap:wrap;align-items:flex-end;margin-top:1.7rem;padding-top:1.5rem;border-top:1px solid var(--line)}
 .stats .st .num{font-family:"Cormorant Garamond";font-weight:600;font-size:2.1rem;color:var(--acc);line-height:1}
-.stats .st .cap{font-family:"Jost";font-size:.72rem;letter-spacing:.12em;color:var(--muted);margin-top:.3rem}
+.stats .st.wide .num{font-family:"Shippori Mincho";font-weight:700;font-size:1.2rem;letter-spacing:.02em}
+.stats .st .cap{font-family:"Jost";font-size:.72rem;letter-spacing:.12em;color:var(--muted);margin-top:.4rem}
 /* cta buttons */
 .ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:2rem}
 .ctas.center{justify-content:center}
@@ -219,7 +223,7 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 <section class="sec band--tint"><div class="wrap reveal"><div class="split rev"><div class="txt"><h2 class="h2"><span class="en">SENSEI ｜ 諏内えみ</span>育ちの第一人者・諏内えみが、あなたに伴走します。</h2><p class="">諏内えみ。皇室や各界のVIPをお迎えのVIPアテンダントとして品格を磨き、著書『「育ちがいい人」だけが知っていること』（ダイヤモンド社）は、2020年から現在まで最も売れたマナー本に。シリーズは累計70万部を超えました。</p>
 <p class="">テレビ出演はメディア200本超——『世界一受けたい授業』『ホンマでっか!?TV』『王様のブランチ』『あさイチ』『ぐるナイ』ほか多数。雑誌『ゼクシィ』保存版「結婚マナー」を全監修し、各誌にも登場。人気ドラマ・映画で有名女優の所作指導も多数手がけています。登録商標『育ちがいい人®』を持つ、『育ち』の第一人者です。</p>
 <p class="">そんな諏内えみが、なぜ、いま自ら少人数を直接教えるのか。本を書いても、テレビに出ても、いつも心のどこかで思っていました。——文字や画面では、どうしても伝わりきらないものがある、と。手の角度、声の置き方、間（ま）、まなざし。それは、すぐ隣で、お一人おひとりに合わせて、直接お渡しするしかありません。</p>
-<p class="">これまで、何千人もの方が「変われた」瞬間に立ち会ってきました。その方々の喜び溢れるお顔を思い浮かべるたび、もっと近くで、もっと深く伝えたい——その想いが募って、はじめて少人数の「デビュタント」という形にたどり着きました。</p><div class="stats"><div class="st"><div class="num">70万部</div><div class="cap">シリーズ累計</div></div><div class="st"><div class="num">200本超</div><div class="cap">メディア出演</div></div><div class="st"><div class="num">育ちがいい人®</div><div class="cap">登録商標</div></div></div></div><div class="fig"><img src="img/prod/profile.jpg" alt="諏内えみ" loading="lazy"></div></div></div></section>
+<p class="">これまで、何千人もの方が「変われた」瞬間に立ち会ってきました。その方々の喜び溢れるお顔を思い浮かべるたび、もっと近くで、もっと深く伝えたい——その想いが募って、はじめて少人数の「デビュタント」という形にたどり着きました。</p><div class="stats"><div class="st"><div class="num">70万部</div><div class="cap">シリーズ累計</div></div><div class="st"><div class="num">200本超</div><div class="cap">メディア出演</div></div><div class="st wide"><div class="num">育ちがいい人®</div><div class="cap">登録商標</div></div></div></div><div class="fig"><img src="img/prod/profile.jpg" alt="諏内えみ" loading="lazy"></div></div></div></section>
 <section class="sec "><div class="wrap reveal"><div class="split"><div class="txt"><h2 class="h2"><span class="en">A REAL CHANGE ｜ 変化</span>「私なんて」と言っていた方が、その場の主役に。</h2><p class="">たとえば──10年間、引きこもっていた、まりさん（30代）。</p>
 <p class="">人前に出ることも、自分に自信を持つことも、できなかった。それが、所作と立ち居振る舞いを整えていくうちに——「人生が180度、劇的に変わりました」。お見合いの話が一気に増え、出会いも多くなった。いまでは“選ばれる”女性として、堂々と立っています。</p>
 <p class="">変わったのは、性格ではありません。ふるまいです。</p><div class="tag">まりさん・30代</div></div><div class="fig"><img src="img/prod/change.jpg" alt="諏内えみ" loading="lazy"></div></div></div></section>
