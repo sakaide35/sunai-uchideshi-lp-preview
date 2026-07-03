@@ -154,18 +154,22 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 .foot{text-align:center;padding:3rem 1rem 6rem;font-size:.78rem;color:var(--muted);line-height:1.9}
 .note{font-size:.82rem;color:var(--muted);font-weight:300}
 
-:root{--bg:#ffffff;--ink:#28403f;--muted:#89a4a1;--acc:#0a9e96;--acclt:#c6f1eb;
---deep:#123a39;--line:#d9efeb;--line2:#a4dcd5;--panel:#f4fcfb;--tint:#e9f9f6;
---gold:#c7a769;--accsh:rgba(10,158,150,.28);--barbg:rgba(255,255,255,.93);--scrim:rgba(10,42,42,.4);--scrim2:rgba(10,42,42,.8)}
+:root{--bg:#faf8f3;--ink:#2a2520;--muted:#7f7565;--acc:#a9863f;--acclt:#e7d09a;
+--deep:#182036;--line:#e6dfcf;--line2:#c8b992;--panel:#ffffff;--tint:#f4edde;
+--gold:#a9863f;--accsh:rgba(169,134,63,.34);--barbg:rgba(250,248,243,.93);--scrim:rgba(18,22,38,.42);--scrim2:rgba(18,22,38,.82)}
+/* B: 視認性UP（本文をやや太く・補助文字を濃く） */
+body.tb p,body.tb .lb p,body.tb .empathy p{font-weight:400}
+body.tb .note{font-weight:400;color:#6f6656}
+body.tb .card p,body.tb .quote p{font-weight:400}
 
 .heroB{background:linear-gradient(160deg,var(--tint),#ffffff);position:relative;padding:clamp(3rem,7vw,5rem) 1.5rem clamp(3rem,7vw,5rem);text-align:center;overflow:hidden}
 .heroB .brand{font-family:"Cormorant Garamond";font-style:italic;letter-spacing:.3em;color:var(--acc);font-size:1.05rem;margin-bottom:2rem}
 .heroB .frame{position:relative;max-width:600px;margin:0 auto}
-.heroB .frame img{width:100%;border:11px solid #fff;box-shadow:0 34px 74px rgba(18,58,57,.24);border-radius:2px;position:relative;z-index:2}
-.heroB .frame:before{content:"";position:absolute;top:-28px;bottom:-28px;left:50%;width:30px;transform:translateX(-50%);background:linear-gradient(#fff,#f3faf9);box-shadow:0 0 24px rgba(18,58,57,.14);z-index:1}
-.heroB .frame:after{content:"";position:absolute;left:-28px;right:-28px;top:46%;height:30px;background:linear-gradient(90deg,#f3faf9,#fff,#f3faf9);box-shadow:0 0 24px rgba(18,58,57,.14);z-index:1}
+.heroB .frame img{width:100%;border:11px solid #fff;box-shadow:0 34px 74px rgba(90,74,42,.24);border-radius:2px;position:relative;z-index:2}
+.heroB .frame:before{content:"";position:absolute;top:-28px;bottom:-28px;left:50%;width:30px;transform:translateX(-50%);background:linear-gradient(#fff,#f6f1e6);box-shadow:0 0 24px rgba(90,74,42,.14);z-index:1}
+.heroB .frame:after{content:"";position:absolute;left:-28px;right:-28px;top:46%;height:30px;background:linear-gradient(90deg,#f6f1e6,#fff,#f6f1e6);box-shadow:0 0 24px rgba(90,74,42,.14);z-index:1}
 .heroB h1{font-family:"Shippori Mincho";font-weight:600;font-size:clamp(1.5rem,3.8vw,2.35rem);line-height:1.65;margin-top:2.6rem;color:var(--deep)}
-.heroB .sub{font-weight:300;margin-top:1.2rem;max-width:28em;margin-left:auto;margin-right:auto;color:var(--ink)}
+.heroB .sub{font-weight:400;margin-top:1.2rem;max-width:30em;margin-left:auto;margin-right:auto;color:var(--ink)}
 .heroB .rb{display:inline-block;font-family:"Jost";letter-spacing:.28em;font-size:.68rem;color:var(--acc);border:1px solid var(--line2);border-radius:30px;padding:.4rem 1.2rem;margin-top:1.6rem}
 
 .darkband{background:var(--deep);color:#fff}
@@ -208,7 +212,7 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 .cards.five .card{flex:0 1 258px;max-width:300px}
 @media(max-width:820px){.cards.five .card{flex:1 1 100%;max-width:none}}
 </style></head>
-<body>
+<body class="tb">
 <section class="heroB"><div class="reveal in"><div class="brand">EMI SUNAI ｜ DEBUTANTE</div>
 <div class="frame"><img src="img/prod/hero-b.jpg" alt="諏内えみ"></div>
 <h1>その光の中へ。憧れていた「いつか」を、今日に。</h1>
@@ -218,11 +222,11 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 <section class="sec band band--tint"><div class="wrap reveal"><h2 class="h2"><span class="en">YOU ALREADY KNOW</span>あなたは、もう、その世界を知っている。</h2><div class="lb c"><p>『育ちがいい人』のページをめくった、あの夜。<br>テレビの中の、あの所作の美しさ。<br>ずっと先生に触れてきたあなたは、<br>もう知っているはずです——<br>どんな人が、あの光の中に立てるのかを。</p><p>知っているのに、まだ、自分はガラスの外にいる。<br>その扉を、今日、開きましょう。</p></div></div></section>
 <section class="sec band"><div class="wrap reveal"><h2 class="h2"><span class="en">FROM OUTSIDE THE GLASS</span>でも、ずっと、ガラスの外から見ていた。</h2><div class="lb c"><p>憧れながら、こう思っていませんでしたか。<br>「あの世界は、生まれが違う人のもの」<br>「私とは、育ちが違う。到底無理」<br>そうして一歩を踏み出せないまま——<br>同窓会で、あの華やかな女性の隣に立つと、半歩引いてしまう。<br>心のどこかで、羨ましく思いながら、自分のふるまいが、気になる。<br>お見合いの席や、婚活の場でも。<br>見られているのは器量より“育ち”かもしれないと、ふいに怖くなる。</p><p>義実家の食事会でも、わが子のお受験の場面でも、また半歩、引いてしまう。</p><p>——憧れは、見ているだけでは、自分のものになりません。</p></div></div></section>
 <section class="sec "><div class="wrap reveal"><div class="split tw"><div class="txt"><h2 class="h2"><span class="en">THE CHOICE ｜ 内弟子という選択</span>デビュタント（内弟子）という、選択。</h2><div class="lb"><p>“デビュタント”とは、社交界へ初めて踏み出す女性のこと。<br>ここでは——<br>諏内えみのもとで、品のある世界へ、今日から踏み出すあなた。<br>その一歩を選んだ一期生を、「デビュタント（内弟子）」と呼びます。</p><p>このたび2026年9月、諏内えみが、ごく少人数の<br>「デビュタント（内弟子）」を迎えます。<br>本やテレビの向こうにいた諏内えみの、いちばん近くで3ヶ月、直接師事する。<br>——ずっと憧れてきたその人のもとで、あの世界の作法を、あなたのものにしていく。<br>それが、デビュタントです。</p></div></div><div class="fig"><img src="img/prod/coaching.jpg" alt="諏内えみ" loading="lazy"></div></div></div></section>
-<section class="sec band band--tint"><div class="wrap reveal"><h2 class="h2"><span class="en">THE FORM ｜ 型</span>その品は、才能ではなく「型」です。</h2><div class="lb c"><p>品は、生まれや才能ではありません。<br>諏内えみが体系化した「育ちがいい人」の振る舞いは、<br>背筋の伸ばし方、お辞儀の角度、椅子への座り方、初対面のひと言目まで、<br>ひとつひとつ再現できる「型」でできています。<br>だから、生まれた家もこれまでの育ちも関係なく、<br>型を受け取り、繰り返した方から、確実に品が身についていきます。<br>——諏内えみの指導は、この「型」を、あなたの体に馴染むまでお渡しすることから始まります。</p></div><div class="chips" style="justify-content:center"><span>背筋の伸ばし方</span><span>お辞儀の角度</span><span>椅子への座り方</span><span>初対面のひと言目</span></div></div></section>
+<section class="sec band band--tint"><div class="wrap reveal"><h2 class="h2"><span class="en">THE FORM ｜ 型</span>その品は、才能ではなく「型」です。</h2><div class="lb c"><p>品は、生まれや才能ではありません。<br>諏内えみが体系化した「育ちがいい人」の振る舞いは、<br>背筋の伸ばし方、お辞儀の角度、椅子への座り方、初対面のひと言目まで、<br>ひとつひとつ再現できる「型」でできています。<br>だから、生まれた家もこれまでの育ちも関係なく、<br>型を受け取り、実践した方から、確実に品がつきます。<br>——諏内えみの指導は、この「型」を、あなたの体に馴染むまでお渡しすることから始まります。</p></div><div class="chips" style="justify-content:center"><span>背筋の伸ばし方</span><span>お辞儀の角度</span><span>椅子への座り方</span><span>初対面のひと言目</span></div></div></section>
 <section class="sec band"><div class="wrap reveal"><h2 class="h2"><span class="en">WHAT YOU GET ｜ 手に入るもの</span>この3ヶ月で、手に入るもの。</h2><div class="cards five"><div class="card"><div class="n">01</div><h4>型のすべて</h4></div><div class="card"><div class="n">02</div><h4>実践のワーク</h4></div><div class="card"><div class="n">03</div><h4>一人ひとりへの個別添削</h4></div><div class="card"><div class="n">04</div><h4>同じ志の同期との縁</h4></div><div class="card"><div class="n">05</div><h4>諏内えみ先生の直接指導</h4></div></div><p class="center" style="margin-top:1.6rem">本を何冊読んでも届かなかった最後の一歩を、ここで越えます。</p></div></section>
 <section class="sec band band--tint"><div class="wrap reveal"><h2 class="h2"><span class="en">THE FORMAT ｜ 学びの形</span>いつ、どこで、どう学ぶか。</h2><div class="sched"><div class="b"><div class="k">対面</div><div class="v">◯回</div></div><div class="b"><div class="k">オンライン</div><div class="v">◯回</div></div><div class="b"><div class="k">開講</div><div class="v">2026年9月</div></div></div><p class="note center" style="margin-top:1rem">※ 形式・日程は、確定し次第ここに明記します。</p></div></section>
-<section class="sec band"><div class="wrap reveal"><h2 class="h2"><span class="en">YOUR STAGE ｜ 憧れの場面</span>その品は、いちばん大切な場面で、あなたを助けます。</h2><div class="scene"><div class="row"><div class="t">同窓会で</div><p>思わず友人が振り返る。今度は、あなたが羨望される番です。</p></div><div class="row"><div class="t">お見合い・婚活で</div><p>憧れ続けた人と出会える。</p></div><div class="row"><div class="t">お受験で</div><p>親子そろって、品がにじみ出る。</p></div><div class="row"><div class="t">食事会・パーティで</div><p>誰よりも堂々と美しく、一目置かれる。</p></div></div></div></section>
-<section class="sec bgsec" style="--bgimg:url(img/prod/vienna-2.jpg)"><div class="wrap reveal"><h2 class="h2"><span class="en">VIENNA ｜ その先にある舞台</span>そして、その先には——ウィーンの舞踏会。</h2><div class="lb cw"><p>育ちが身につくと、毎日の景色が変わります。憧れのレストランやホテルで、自然と上客として扱われる。同窓会では、場の華に。<br>お見合いや婚活では、1ランク・2ランク上の方と出会える。</p><p>そして、その先には——ウィーンの宮殿で開かれる社交界の舞踏会という世界も、待っています。<br>無数のシャンデリア、白いドレス。その夜の主役として、フロアの中央へ。</p><p>かつて遠くから見つめていた、あの場面の中に、あなた自身が立つ。<br>それは、夢物語ではありません。今日の小さな一歩から、続いています。</p><p>※ウィーンの舞踏会への参加（別料金）について詳しくは、本科の中でお伝えします。</p></div></div></section>
+<section class="sec band"><div class="wrap reveal"><h2 class="h2"><span class="en">YOUR STAGE ｜ 憧れの場面</span>その品は、いちばん大切な場面で、あなたを助けます。</h2><div class="scene"><div class="row"><div class="t">同窓会で</div><p>思わず友人が振り返る。今度は、あなたが羨望される番です。</p></div><div class="row"><div class="t">お見合い・婚活で</div><p>憧れ続けたワンランク上の人と出会える。</p></div><div class="row"><div class="t">お受験で</div><p>親子そろって、品がにじみ出る。</p></div><div class="row"><div class="t">食事会・パーティで</div><p>誰よりも堂々と美しく、一目置かれる。</p></div></div></div></section>
+<section class="sec bgsec" style="--bgimg:url(img/prod/vienna-2.jpg)"><div class="wrap reveal"><h2 class="h2"><span class="en">VIENNA ｜ その先にある舞台</span>そして、その先には——ウィーンの舞踏会。</h2><div class="lb cw"><p>育ちが身につくと、毎日の景色が変わります。憧れのレストランやホテルで、上客として扱われる。同窓会では、場の華に。<br>お見合いや婚活では、1ランク・2ランク上の方と出会える。</p><p>そして、その先には——ウィーンの宮殿で開かれる社交界の舞踏会という世界も、待っています。<br>無数のシャンデリア、白いドレス。その夜の主役として、フロアの中央へ。</p><p>かつて遠くから見つめていた、あの場面の中に、あなた自身が立つ。<br>それは、夢物語ではありません。今日の小さな一歩から、続いています。</p><p>※ウィーンの舞踏会への参加（別料金）について詳しくは、本科の中でお伝えします。</p></div></div></section>
 <section class="sec band band--tint"><div class="wrap reveal"><h2 class="h2"><span class="en">THE &quot;SOMEDAY&quot;</span>憧れているだけの「いつか」は、来ません。</h2><div style="max-width:32em;margin:0 auto"><p class="">「いつか、先生のように」と思い続けて、何年が過ぎたでしょう。見ているだけなら、その景色は、これからもずっと、ガラスの外。来年も、同じ場所で、半歩引く。</p>
 <p class="">そして、その姿を、いちばん見られたくない相手がいるはずです。ずっと羨んできた、あの女友達かもしれません。</p>
 <p class="">——変わらないことのほうが、本当は、惜しい。</p></div></div></section>
@@ -243,13 +247,13 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 </div>
 <p class="note center" style="margin-top:1rem">※ 直弟子・襲名は、その先に続く道のご参考です。今回のご案内は「内弟子（デビュタント）」と「見習い（オーディター）」の2つです。</p><div class="ctas center"><a class="btn btn-primary" href="#entry">一期生にエントリー（審査制）<span class="s">DEBUTANTE ・ 9月開講/3ヶ月</span></a><a class="btn btn-ghost" href="#auditor">見習いから始める<span class="s">AUDITOR ・ 月1万/出入り自由</span></a></div></div></section>
 <section class="sec band"><div class="wrap reveal"><div class="center"><div class="bignum">15<span style="font-size:1.4rem"> 名限定</span></div></div><h2 class="h2"><span class="en">SELECTION ｜ 審査制</span>誰でも、ではなく。「あなただから」。</h2><div class="lb c"><p>デビュタントは、15名限定のエントリー審査制です。<br>諏内えみ先生が、お一人おひとりを直接見るため。</p><p>——これは、ふるい落とすための審査ではありません。<br>ずっと憧れ、本気で変わりたいと願ってきたあなたを、<br>「あなただから」とお迎えするための、お互いの約束です。</p></div></div></section>
-<section class="sec band--tint"><div class="wrap reveal"><div class="split rev"><div class="txt"><h2 class="h2"><span class="en">SENSEI ｜ 諏内えみ</span>育ちの第一人者・諏内えみが、あなたに伴走します。</h2><p class="">諏内えみ。皇室や各界のVIPをお迎えのVIPアテンダントとして品格を磨き、著書『「育ちがいい人」だけが知っていること』（ダイヤモンド社）は、2020年から現在まで最も売れたマナー本に。シリーズは累計70万部を超えました。</p>
-<p class="">テレビ出演はメディア200本超——『世界一受けたい授業』『ホンマでっか!?TV』『王様のブランチ』『あさイチ』『ぐるナイ』ほか多数。雑誌『ゼクシィ』保存版「結婚マナー」を全監修し、各誌にも登場。人気ドラマ・映画で有名女優の所作指導も多数手がけています。登録商標『育ちがいい人®』を持つ、『育ち』の第一人者です。</p>
+<section class="sec band--tint"><div class="wrap reveal"><div class="split rev"><div class="txt"><h2 class="h2"><span class="en">SENSEI ｜ 諏内えみ</span>育ちの第一人者・諏内えみが、あなたに伴走します。</h2><p class="">諏内えみ。皇室や各界のVIPアテンドとして品格を磨き、著書『「育ちがいい人」だけが知っていること』（ダイヤモンド社）は、2020年から現在まで最も売れたマナー本に。シリーズは累計70万部を超えました。</p>
+<p class="">テレビ出演はメディア200本超——『世界一受けたい授業』『ホンマでっか!?TV』『王様のブランチ』『あさイチ』『ぐるナイ』ほか多数。雑誌『ゼクシィ』保存版を全監修し、『25ans』『STORY』『PRESIDENT』ほか各誌にも登場。人気ドラマ・映画で有名女優の所作指導も多数手がけています。登録商標『育ちがいい人®』を持つ、『育ち』の第一人者です。</p>
 <p class="">そんな諏内えみが、なぜ、いま自ら少人数を直接教えるのか。本を書いても、テレビに出ても、いつも心のどこかで思っていました。——文字や画面では、どうしても伝わりきらないものがある、と。手の角度、声の置き方、間（ま）、まなざし。それは、すぐ隣で、お一人おひとりに合わせて、直接お渡しするしかありません。</p>
 <p class="">これまで、何千人もの方が「変われた」瞬間に立ち会ってきました。その方々の喜び溢れるお顔を思い浮かべるたび、もっと近くで、もっと深く伝えたい——その想いが募って、はじめて少人数の「デビュタント」という形にたどり着きました。</p><div class="stats"><div class="st"><div class="num">70万部</div><div class="cap">シリーズ累計</div></div><div class="st"><div class="num">200本超</div><div class="cap">メディア出演</div></div><div class="st wide"><div class="num">育ちがいい人®</div><div class="cap">登録商標</div></div></div></div><div class="fig"><img src="img/prod/profile.jpg" alt="諏内えみ" loading="lazy"></div></div></div></section>
-<section class="sec "><div class="wrap reveal"><div class="split"><div class="txt"><h2 class="h2"><span class="en">A REAL CHANGE ｜ 変化</span>「私なんて」と言っていた方が、その場の主役に。</h2><div class="lb"><p>たとえば──10年間、引きこもっていた、まりさん（30代）。</p><p>人前に出ることも、自分に自信を持つことも、できなかった。<br>それが、所作と立ち居振る舞いを整えていくうちに——<br>「人生が180度、劇的に変わりました。」<br>お見合いの話が一気に増え、出会いも多くなった。<br>いまでは“選ばれる”女性として、堂々と立っています。</p><p>変わったのは、性格ではありません。ふるまいです。</p></div><div class="tag">まりさん・30代</div></div><div class="fig"><img src="img/prod/change.jpg" alt="諏内えみ" loading="lazy"></div></div></div></section>
+<section class="sec "><div class="wrap reveal"><div class="split"><div class="txt"><h2 class="h2"><span class="en">A REAL CHANGE ｜ 変化</span>「私なんて」と言っていた方が、その場の主役に。</h2><div class="lb"><p>たとえば──10年間、引きこもっていた、マリさん（30代）。</p><p>人前に出ることも、自分に自信を持つことも、できなかった。<br>それが、所作と立ち居振る舞いを整えていくうちに——<br>「人生が180度、劇的に変わりました」。<br>お見合いの話が一気に増え、出会いも多くなった。<br>いまでは“選ばれる”女性として、堂々と立っています。</p><p>変わったのは、ふるまいだけではありません。<br>ふるまいが変わると、性格まで変わる——<br>引っ込み思案だった方が、自分から前に出られるようになる。<br>振る舞いを変えると、性格まで変わるんです。</p></div><div class="tag">マリさん・30代</div></div><div class="fig"><img src="img/prod/change.jpg" alt="諏内えみ" loading="lazy"></div></div></div></section>
 <section class="sec band band--tint"><div class="wrap reveal"><h2 class="h2"><span class="en">VOICES ｜ 受講生のお声</span>先に歩いた方たちの、声。</h2><div class="tgrid">
-<div class="quote"><p>人生が180度、劇的に変わりました。</p><div class="who">まりさん・30代</div></div>
+<div class="quote"><p>人生が180度、劇的に変わりました。</p><div class="who">マリさん・30代</div></div>
 <div class="quote"><p>上品、エレガントと褒められるように。ハッとさせる立ち居振る舞いに。</p><div class="who">Nさん・30代</div></div>
 </div><p class="note center" style="margin-top:1.2rem">※ 掲載するお写真はデザイン段階で選定します。開講後は一期生のお声を掲載予定です。</p></div></section>
 <section class="sec band"><div class="wrap reveal"><h2 class="h2"><span class="en">OUR PROMISE ｜ ご安心のお約束</span>迷われたときは、まず、諏内えみ先生へ。</h2><div class="lb c"><p>途中で不安になられたら、どうぞ諏内えみ先生にご相談ください。<br>理由をうかがい、必要な際は、無料の補講でサポートします。</p><p>最後まで、責任を持って伴走する——それが、先生としてのお約束です。</p></div></div></section>
