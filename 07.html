@@ -154,23 +154,30 @@ p{font-weight:300;font-size:1.0rem;color:var(--ink)}
 .foot{text-align:center;padding:3rem 1rem 6rem;font-size:.78rem;color:var(--muted);line-height:1.9}
 .note{font-size:.82rem;color:var(--muted);font-weight:300}
 
-:root{--bg:#faf8f3;--ink:#2a2520;--muted:#7f7565;--acc:#a9863f;--acclt:#e7d09a;
---deep:#182036;--line:#e6dfcf;--line2:#c8b992;--panel:#ffffff;--tint:#f4edde;
---gold:#a9863f;--accsh:rgba(169,134,63,.34);--barbg:rgba(250,248,243,.93);--scrim:rgba(18,22,38,.42);--scrim2:rgba(18,22,38,.82)}
+:root{--bg:#faf5e8;--ink:#2a2318;--muted:#7d7052;--acc:#9c7623;--acclt:#e4c274;
+--deep:#161d33;--line:#ead9b6;--line2:#c9b26a;--panel:#fffdf7;--tint:#f5e8c7;
+--gold:#9c7623;--accsh:rgba(156,118,35,.36);--barbg:rgba(250,245,232,.94);--scrim:rgba(20,15,4,.44);--scrim2:rgba(20,15,4,.84)}
 /* B: 視認性UP（本文をやや太く・補助文字を濃く） */
 body.tb p,body.tb .lb p,body.tb .empathy p{font-weight:400}
-body.tb .note{font-weight:400;color:#6f6656}
+body.tb .note{font-weight:400;color:#6b5f45}
 body.tb .card p,body.tb .quote p{font-weight:400}
+/* B: ゴールド感の強調 */
+body.tb .eyebrow,body.tb .chap,body.tb .h2 .en{color:var(--gold)}
+body.tb .quote:before{color:var(--gold)}
+body.tb .price .top{background:linear-gradient(140deg,#1c2440,#141a30)}
+body.tb .price .top .amt{color:#f0d99e}
 
-.heroB{background:linear-gradient(160deg,var(--tint),#ffffff);position:relative;padding:clamp(3rem,7vw,5rem) 1.5rem clamp(3rem,7vw,5rem);text-align:center;overflow:hidden}
-.heroB .brand{font-family:"Cormorant Garamond";font-style:italic;letter-spacing:.3em;color:var(--acc);font-size:1.05rem;margin-bottom:2rem}
-.heroB .frame{position:relative;max-width:600px;margin:0 auto}
-.heroB .frame img{width:100%;border:11px solid #fff;box-shadow:0 34px 74px rgba(90,74,42,.24);border-radius:2px;position:relative;z-index:2}
-.heroB .frame:before{content:"";position:absolute;top:-28px;bottom:-28px;left:50%;width:30px;transform:translateX(-50%);background:linear-gradient(#fff,#f6f1e6);box-shadow:0 0 24px rgba(90,74,42,.14);z-index:1}
-.heroB .frame:after{content:"";position:absolute;left:-28px;right:-28px;top:46%;height:30px;background:linear-gradient(90deg,#f6f1e6,#fff,#f6f1e6);box-shadow:0 0 24px rgba(90,74,42,.14);z-index:1}
-.heroB h1{font-family:"Shippori Mincho";font-weight:600;font-size:clamp(1.5rem,3.8vw,2.35rem);line-height:1.65;margin-top:2.6rem;color:var(--deep)}
-.heroB .sub{font-weight:400;margin-top:1.2rem;max-width:30em;margin-left:auto;margin-right:auto;color:var(--ink)}
-.heroB .rb{display:inline-block;font-family:"Jost";letter-spacing:.28em;font-size:.68rem;color:var(--acc);border:1px solid var(--line2);border-radius:30px;padding:.4rem 1.2rem;margin-top:1.6rem}
+.heroB{position:relative;height:100svh;min-height:620px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.heroB .bg{position:absolute;inset:0;background:url(img/prod/hero-b.jpg) center/cover;z-index:-2;animation:kbb 18s ease-out forwards}
+@keyframes kbb{from{transform:scale(1.09)}to{transform:scale(1)}}
+.heroB:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,27,9,.5),rgba(34,23,8,.16) 40%,rgba(22,15,5,.9));z-index:-1}
+.heroB:before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 8%,rgba(214,170,90,.28),transparent 55%);z-index:-1;mix-blend-mode:screen}
+.heroB .brand{position:absolute;top:1.7rem;left:0;right:0;text-align:center;font-family:"Cormorant Garamond";font-style:italic;letter-spacing:.34em;font-size:1.02rem;color:#f0d9a2;z-index:2;opacity:.95}
+.heroB .inner{max-width:1060px;margin:0 auto;padding:0 1.6rem clamp(4rem,9vw,6rem);width:100%}
+.heroB .kick{font-family:"Jost";letter-spacing:.42em;font-size:.74rem;color:var(--acclt);margin-bottom:1.4rem;text-transform:uppercase}
+.heroB h1{font-family:"Shippori Mincho";font-weight:700;font-size:clamp(1.8rem,4.6vw,3.2rem);line-height:1.48;text-shadow:0 3px 30px rgba(0,0,0,.6);max-width:18em}
+.heroB .sub{font-weight:400;margin-top:1.5rem;max-width:34em;font-size:1.02rem;text-shadow:0 2px 16px rgba(0,0,0,.7);line-height:2}
+.heroB .scroll{position:absolute;right:2rem;bottom:1.6rem;font-family:"Jost";font-size:.62rem;letter-spacing:.32em;color:#fff;opacity:.75;writing-mode:vertical-rl}
 
 .darkband{background:var(--deep);color:#fff}
 .darkband .h2,.darkband p,.darkband li{color:#fff}
@@ -213,12 +220,11 @@ body.tb .card p,body.tb .quote p{font-weight:400}
 @media(max-width:820px){.cards.five .card{flex:1 1 100%;max-width:none}}
 </style></head>
 <body class="tb">
-<section class="heroB"><div class="reveal in"><div class="brand">EMI SUNAI ｜ DEBUTANTE</div>
-<div class="frame"><img src="img/prod/hero-b.jpg" alt="諏内えみ"></div>
-<h1>その光の中へ。憧れていた「いつか」を、今日に。</h1>
-<p class="sub">本の中で、画面の向こうで、ずっと憧れてきたあの品を。<br>その「いつか」を、今日から。<br>今度は、あなたが見上げられる側へ。<br>育ちは、いつからでも変えられます。</p>
-<div class="rb">2026年9月開講 ／ 少人数・3ヶ月 ／ 審査制</div>
-<div class="ctas center"><a class="btn btn-primary" href="#entry">一期生にエントリー（審査制）<span class="s">DEBUTANTE ・ 9月開講/3ヶ月</span></a><a class="btn btn-ghost" href="#auditor">見習いから始める<span class="s">AUDITOR ・ 月1万/出入り自由</span></a></div></div></section>
+<section class="heroB"><div class="bg"></div><div class="brand">EMI SUNAI</div>
+<div class="inner reveal in"><div class="kick">DEBUTANTE ｜ 内弟子 一期生 募集</div>
+<h1>そのシャンデリアの灯りの下に、いつか立つのは──あなたです。</h1>
+<p class="sub">本の中で、画面の向こうで、ずっと憧れてきたあの品を。その「いつか」を、今日から。今度は、あなたが見上げられる側へ。育ちは、いつからでも、変えられます。</p>
+<div class="ctas center"><a class="btn btn-primary" href="#entry">一期生にエントリー（審査制）<span class="s">DEBUTANTE ・ 9月開講/3ヶ月</span></a><a class="btn btn-ghost" href="#auditor">見習いから始める<span class="s">AUDITOR ・ 月1万/出入り自由</span></a></div></div><div class="scroll">SCROLL</div></section>
 <section class="sec band band--tint"><div class="wrap reveal"><h2 class="h2"><span class="en">YOU ALREADY KNOW</span>あなたは、もう、その世界を知っている。</h2><div class="lb c"><p>『育ちがいい人®』のページをめくった、あの夜。<br>テレビの中の、あの所作の美しさ。<br>ずっと先生に触れてきたあなたは、<br>もう知っているはずです——<br>どんな人が、あの光の中に立てるのかを。</p><p>知っているのに、まだ、自分はガラスの外にいる。<br>その扉を、今日、開きましょう。</p></div></div></section>
 <section class="sec band"><div class="wrap reveal"><h2 class="h2"><span class="en">FROM OUTSIDE THE GLASS</span>でも、ずっと、ガラスの外から見ていた。</h2><div class="lb c"><p>憧れながら、こう思っていませんでしたか。<br>「あの世界は、生まれが違う人のもの」<br>「私とは、育ちが違う。到底無理」<br>そうして一歩を踏み出せないまま——<br>同窓会で、あの華やかな女性の隣に立つと、半歩引いてしまう。<br>心のどこかで、羨ましく思いながら、自分のふるまいが、気になる。<br>お見合いの席や、婚活の場でも。<br>見られているのは器量より“育ち”かもしれないと、ふいに怖くなる。</p><p>義実家の食事会でも、わが子のお受験の場面でも、また半歩、引いてしまう。</p><p>——憧れは、見ているだけでは、自分のものになりません。</p></div></div></section>
 <section class="sec "><div class="wrap reveal"><div class="split tw"><div class="txt"><h2 class="h2"><span class="en">THE CHOICE ｜ 内弟子という選択</span>デビュタント（内弟子）という、選択。</h2><div class="lb"><p>“デビュタント”とは、社交界へ初めて踏み出す女性のこと。<br>ここでは——<br>諏内えみのもとで、品のある世界へ、今日から踏み出すあなた。<br>その一歩を選んだ一期生を、「デビュタント（内弟子）」と呼びます。</p><p>このたび2026年9月、諏内えみが、ごく少人数の<br>「デビュタント（内弟子）」を迎えます。<br>本やテレビの向こうにいた諏内えみ先生の、いちばん近くで、3ヶ月、直接師事する。<br>——ずっと憧れてきたその人のもとで、あの世界の作法を、あなたのものにしていく。<br>それが、デビュタントです。</p></div></div><div class="fig"><img src="img/prod/coaching.jpg" alt="諏内えみ" loading="lazy"></div></div></div></section>
@@ -254,7 +260,7 @@ body.tb .card p,body.tb .quote p{font-weight:400}
 <section class="sec band band--tint"><div class="wrap reveal"><h2 class="h2"><span class="en">Q &amp; A ｜ よくあるご不安に</span>踏み出す前の、よくあるご不安に。</h2><div class="faq"><details><summary><span class="q">Q</span>忙しくても続けられますか？</summary><div class="ans">はい。日々の暮らしの中でできる「型」が中心です。</div></details><details><summary><span class="q">Q</span>本当に変われますか？</summary><div class="ans">品は才能ではなく「型」です。受け取り、繰り返せば、変わります。実際、続けた方で変わらなかった生徒さんを、私たちは見たことがありません。</div></details><details><summary><span class="q">Q</span>お支払い方法は？</summary><div class="ans">入学時に一括（5%OFF）、または分割（3・6・12ヶ月）でご案内します。</div></details><details><summary><span class="q">Q</span>審査が不安です。</summary><div class="ans">今のあなたを試すものではありません。本気で変わりたいお気持ちを、いちばん大切にしています。</div></details></div></div></section>
 <section class="sec bgsec" style="--bgimg:url(img/prod/closing-b.jpg)"><div class="wrap reveal"><h2 class="h2"><span class="en">THE LIGHT ｜ さあ、その光の中へ</span>さあ、その光の中へ。</h2><p>ずっと憧れてきた、その「いつか」。それを「今日」に変えられるのは、あなただけです。</p><p>あなたは、ちゃんとしているつもりで、ここまで来ました。ただ、本当の作法を、まだ知らなかっただけ。</p><p>——ずっと羨ましく見上げてきた、あの光の中へ。今度は、あなたが、見上げられる側に。</p><p>※この時点で、お支払いは発生しません。</p><div class="ctas center" id="entry"><a class="btn btn-primary" href="mailto:?subject=デビュタント一期生エントリー">一期生に応募する<span class="s">この時点でお支払いは発生しません</span></a></div></div></section>
 <section class="sec band" id="auditor"><div class="wrap reveal"><h2 class="h2"><span class="en">AUDITOR ｜ 見習い</span>今期は見送る、という方も。</h2><div class="lb c"><p>「今はまだ、デビュタント（内弟子）までは踏み切れない」<br>——その気持ちも、自然です。</p><p>まずは月額1万円の「オーディター（見習い）」から、憧れの世界の中に、身を置いてみてください。</p><p>出入りは自由。あなたのペースで、一歩目を。</p></div><div class="ctas center"><a class="btn btn-ghost" href="mailto:?subject=オーディター申込">見習い（月額1万円・出入り自由）から始める</a></div></div></section>
-<div class="foot">諏内えみ｜デビュタント（内弟子）一期生 募集（本番B・すでに慕ってくださる方へ）<br>※ 本ページはデザイン確認用の下書きです。写真・実名・料金詳細・開催形式は確定前の内容を含みます。</div>
+<div class="foot"><a href="privacy.html" style="color:var(--acc);text-decoration:underline;font-weight:500">プライバシーポリシー</a><br><br>諏内えみ｜デビュタント（内弟子）一期生 募集（本番B・すでに慕ってくださる方へ）<br>※ 本ページはデザイン確認用の下書きです。写真・実名・料金詳細・開催形式は確定前の内容を含みます。</div>
 <div class="stick" id="stick"><a class="p" href="#entry">一期生にエントリー</a><a class="g" href="#auditor">見習いから始める</a></div>
 
 <script>
