@@ -181,6 +181,16 @@ body.tb .price .top .amt{color:#f0d99e}
 .imgband{width:100%;height:clamp(220px,34vw,440px);object-fit:cover;border-radius:3px}
 .tag{display:inline-block;font-family:Jost;font-size:.72rem;letter-spacing:.14em;color:var(--acc);border:1px solid var(--line2);border-radius:30px;padding:.32rem .95rem;margin-top:1rem}
 .center{text-align:center}
+/* スマホ：指定改行を解除して自然な流し（孤立行・崩れ防止） */
+@media(max-width:680px){
+ .lb br,.empathy br,.heroA .sub br,.heroB .sub br{display:none}
+}
+/* スマホ：価格表の行を縦積み（文字割れ防止） */
+@media(max-width:560px){
+ .price .body .row{flex-direction:column;align-items:flex-start;gap:.15rem}
+ .price .body .row span:first-child{color:var(--acc);font-weight:600}
+ .price .top .amt{font-size:2.7rem}
+}
 /* 共感セクション：指定改行・行あたり文字数を広めに */
 .empathy{max-width:46em;margin:0 auto}
 .empathy p{max-width:none}

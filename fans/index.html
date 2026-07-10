@@ -170,13 +170,13 @@ body.tb .price .top .amt{color:#f0d99e}
 .heroB{position:relative;height:100svh;min-height:620px;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
 .heroB .bg{position:absolute;inset:0;background:url(/img/prod/hero-b.jpg) center/cover;z-index:-2;animation:kbb 18s ease-out forwards}
 @keyframes kbb{from{transform:scale(1.09)}to{transform:scale(1)}}
-.heroB:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,27,9,.5),rgba(34,23,8,.16) 40%,rgba(22,15,5,.9));z-index:-1}
+.heroB:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,20,7,.58),rgba(28,19,7,.42) 42%,rgba(16,11,3,.93));z-index:-1}
 .heroB:before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 8%,rgba(214,170,90,.28),transparent 55%);z-index:-1;mix-blend-mode:screen}
 .heroB .brand{position:absolute;top:1.7rem;left:0;right:0;text-align:center;font-family:"Cormorant Garamond";font-style:italic;letter-spacing:.34em;font-size:1.02rem;color:#f0d9a2;z-index:2;opacity:.95}
 .heroB .inner{max-width:1060px;margin:0 auto;padding:0 1.6rem clamp(4rem,9vw,6rem);width:100%}
 .heroB .kick{font-family:"Jost";letter-spacing:.42em;font-size:.74rem;color:var(--acclt);margin-bottom:1.4rem;text-transform:uppercase}
 .heroB h1{font-family:"Shippori Mincho";font-weight:700;font-size:clamp(1.8rem,4.6vw,3.2rem);line-height:1.48;text-shadow:0 3px 30px rgba(0,0,0,.6);max-width:18em}
-.heroB .sub{font-weight:400;margin-top:1.5rem;max-width:34em;font-size:1.02rem;text-shadow:0 2px 16px rgba(0,0,0,.7);line-height:2}
+.heroB .sub{color:#fff;font-weight:400;margin-top:1.5rem;max-width:34em;font-size:1.02rem;text-shadow:0 2px 18px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.55);line-height:2}
 .heroB .scroll{position:absolute;right:2rem;bottom:1.6rem;font-family:"Jost";font-size:.62rem;letter-spacing:.32em;color:#fff;opacity:.75;writing-mode:vertical-rl}
 
 .darkband{background:var(--deep);color:#fff}
@@ -193,6 +193,16 @@ body.tb .price .top .amt{color:#f0d99e}
 .imgband{width:100%;height:clamp(220px,34vw,440px);object-fit:cover;border-radius:3px}
 .tag{display:inline-block;font-family:Jost;font-size:.72rem;letter-spacing:.14em;color:var(--acc);border:1px solid var(--line2);border-radius:30px;padding:.32rem .95rem;margin-top:1rem}
 .center{text-align:center}
+/* スマホ：指定改行を解除して自然な流し（孤立行・崩れ防止） */
+@media(max-width:680px){
+ .lb br,.empathy br,.heroA .sub br,.heroB .sub br{display:none}
+}
+/* スマホ：価格表の行を縦積み（文字割れ防止） */
+@media(max-width:560px){
+ .price .body .row{flex-direction:column;align-items:flex-start;gap:.15rem}
+ .price .body .row span:first-child{color:var(--acc);font-weight:600}
+ .price .top .amt{font-size:2.7rem}
+}
 /* 共感セクション：指定改行・行あたり文字数を広めに */
 .empathy{max-width:46em;margin:0 auto}
 .empathy p{max-width:none}
