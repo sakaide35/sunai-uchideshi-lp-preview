@@ -181,9 +181,13 @@ body.tb .price .top .amt{color:#f0d99e}
 .imgband{width:100%;height:clamp(220px,34vw,440px);object-fit:cover;border-radius:3px}
 .tag{display:inline-block;font-family:Jost;font-size:.72rem;letter-spacing:.14em;color:var(--acc);border:1px solid var(--line2);border-radius:30px;padding:.32rem .95rem;margin-top:1rem}
 .center{text-align:center}
-/* スマホ：指定改行を解除して自然な流し（孤立行・崩れ防止） */
-@media(max-width:680px){
- .lb br,.empathy br,.heroA .sub br,.heroB .sub br{display:none}
+/* PC用改行(br.pc)＝スマホで非表示 ／ スマホ用改行(br.sp)＝PCで非表示 */
+@media(max-width:680px){ br.pc{display:none} }
+@media(min-width:681px){ br.sp{display:none} }
+/* スマホ：見出しは指定改行の行数に収める（文字サイズ・字間を微調整） */
+@media(max-width:560px){
+ .heroA h1,.heroB h1{font-size:1.4rem;line-height:1.55;letter-spacing:.005em}
+ .h2{font-size:1.28rem;letter-spacing:.005em}
 }
 /* スマホ：価格表の行を縦積み（文字割れ防止） */
 @media(max-width:560px){
